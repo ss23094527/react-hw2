@@ -2,6 +2,9 @@ import Header from "../component/Header";
 import Content from "../component/MainContent";
 import Footer from "../component/Footer";
 
+// import { feedImages } from './api';
+// feedImages();
+
 
 function Home(){
     return(
