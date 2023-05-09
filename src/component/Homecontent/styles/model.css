@@ -1,0 +1,107 @@
+#modelContainer {
+    height: 100vh;
+    width: 100%;
+    /* background-color: #9260f0; */
+    background: linear-gradient(180deg, #ffffff, #f2f2f8, #ffffff, #fcb5ea, #ff008c);
+}
+
+.interactionWindow{
+    background: #fff;
+    opacity: 80%;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.5em 1em;
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    width: max-content;
+    height: max-content;
+    transform: translate(-50%,0%);
+    animation: fadein 2s;
+}
+
+.presentWindow{
+    background: #fff;
+    opacity: 80%;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    padding: 0.5em 1em;
+    max-width: 300px;
+    overflow-wrap: break-word;
+    position: fixed;
+    top: 140px;
+    right: 50px;
+    width: max-content;
+    height: max-content;
+    /* transform: translate(-50%, -50%); */
+
+   }
+
+.viewButton {
+    background: #fff;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    max-width: 128px;
+    overflow-wrap: break-word;
+    padding: 0.5em 1em;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    transform: translate(-50%, -50%);
+    animation: fadein 3s;
+}
+/* composes: xxx; */
+.returnButton {
+    background: #c95fd0;
+    opacity: 80%;
+    border-radius: 4px;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    max-width: 128px;
+    overflow-wrap: break-word;
+    padding: 0.5em 1em;
+    position: absolute;
+    top: 95px;
+    right: 50px;
+    width: max-content;
+    height: max-content;
+    animation: fadein 2s;
+    /* transform: translate(-50%, -50%); */
+}
+
+@media (max-width: 768px) {
+    .interactionWindow{
+       
+        font-size: 10px;
+ 
+        top: 140px;
+ 
+    }
+}

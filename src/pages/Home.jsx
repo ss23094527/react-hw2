@@ -1,15 +1,13 @@
-import Header from "../component/Header";
-import Content from "../component/MainContent";
+import Header from "../component/Header/index";
+import Content from "../component/Homecontent/index";
 import Footer from "../component/Footer";
 
-// import { feedImages } from './api';
-// feedImages();
 
 
 function Home(){
     return(
         <div className="main-layout main-container">
-            <Header className="header-layout"/>
+            <Header />
             <Content className="content-layout"/>
             <Footer className="footer-layout"/>
         </div>

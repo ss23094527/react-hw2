@@ -5,7 +5,7 @@ export default function Footer() {
           <div className="container">
             <div className="row my-3">
               <h5 className="footer__description col-lg-8">
-                臺北市和平東路二段134號，國立臺北教育大學 數位科技設計學系
+                @__yijieee_
               </h5>
               <ul className="footer__list col-lg-4">
                 <li className="footer__item"><a href="" className="footer__link"><i className="fab fa-facebook-f"></i></a></li>
@@ -16,13 +16,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer__below">
-          <div className="container">
-            <h6>
-              &copy; Copyright All rights reserved.
-            </h6>
-          </div>
-        </div>
+      
       </footer>
     );
 }
