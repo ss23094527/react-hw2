@@ -1,0 +1,24 @@
+.DraggableImages {
+    display: flex;
+    z-index: 99;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    flex-wrap:wrap-reverse;
+    position: absolute;
+  }
+  
+  .DraggableImages-img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: move;
+    transition: transform 0.3s;
+  }
+  
+  .DraggableImages-img.dragging {
+    z-index: 999;
+    transform: scale(1.2);
+  }
+  

@@ -19,11 +19,11 @@ function Header() {
                     <Container fluid style={{ justifyContent: 'end' }}>
                         <Navbar.Brand href="#home">
                             <img
-                                src="../../public/images/logo.png"
-                                width="150"
-                                height="150"
-                                
-                                className=""
+                                src="../../public/images/logo2.png"
+                                width="130"
+                                height="80"
+
+                                className={styles.logo}
                                 alt="React Bootstrap logo"
                             />
                         </Navbar.Brand>
@@ -41,11 +41,36 @@ function Header() {
                             <Offcanvas.Body>
 
                                 <Nav className={styles.navlink}>
-                                    <Nav.Link as={NavLink} to="/">HOME</Nav.Link>
-                                    <Nav.Link as={NavLink} to="/About" >ABOUT ME</Nav.Link>
-                                    <Nav.Link as={NavLink} to="/Graphic" >GRAPHIC</Nav.Link>
-                                    <Nav.Link as={NavLink} to="/Model" >3D MODEL</Nav.Link>
-                                    <Nav.Link as={NavLink} to="/Photo" >PHOTOGRAPH</Nav.Link>
+                                    <Nav.Link as={NavLink} to="/" style={{
+                                        color: "#FF69B4",
+                                        fontWeight: "700",
+                                        fontSize: "17px",
+                                        cursor: "pointer",
+                                    }}>HOME</Nav.Link>
+                                    <Nav.Link as={NavLink} to="/About" style={{
+                                        color: "#FF69B4",
+                                        
+                                        fontSize: "17px",
+                                        cursor: "pointer",
+                                    }}>ABOUT ME</Nav.Link>
+                                    <Nav.Link as={NavLink} to="/Graphic" style={{
+                                        color: "#FF69B4",
+                                       
+                                        fontSize: "17px",
+                                        cursor: "pointer",
+                                    }}>GRAPHIC</Nav.Link>
+                                    <Nav.Link as={NavLink} to="/Model" style={{
+                                        color: "#FF69B4",
+                                        
+                                        fontSize: "17px",
+                                        cursor: "pointer",
+                                    }}>3D MODEL</Nav.Link>
+                                    <Nav.Link as={NavLink} to="/Photo" style={{
+                                        color: "#FF69B4",
+                                        
+                                        fontSize: "17px",
+                                        cursor: "pointer",
+                                    }}>PHOTOGRAPH</Nav.Link>
 
 
                                 </Nav>

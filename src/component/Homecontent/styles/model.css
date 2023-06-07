@@ -1,8 +1,13 @@
 #modelContainer {
+    
     height: 100vh;
     width: 100%;
     /* background-color: #9260f0; */
-    background: linear-gradient(180deg, #ffffff, #f2f2f8, #ffffff, #fcb5ea, #ff008c);
+    background: linear-gradient(180deg, #ffffff, #ffffff, #ffffff, #76ffe170, #ff9dce,#7f3afff1);
+}
+
+html{
+    cursor:url('https://cur.cursors-4u.net/games/gam-2/gam198.png'),pointer ;
 }
 
 .interactionWindow{
@@ -73,13 +78,13 @@
 }
 /* composes: xxx; */
 .returnButton {
-    background: #c95fd0;
+    background: #ff40a0;
     opacity: 80%;
     border-radius: 4px;
     border: none;
     box-sizing: border-box;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 12px;

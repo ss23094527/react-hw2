@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import './styles/model.css'
 import ModelDescription from './ModelDescription.jsx'
+import PictureGallery from "./PictureGallery/PictureGallery";
 function ModelContent() {
     const [showBtn, setshowBtn] = useState(false)
     const [promptVisible, setpromptVisible] = useState(true)
@@ -27,32 +28,38 @@ function ModelContent() {
 
 
     return (
+
+      <div className="">
+        
+
+    
         <model-viewer id="modelContainer"
-            src="Room.glb"
+            src="Room3.glb"
             poster="LOGO.png"
-            environment-image="purple1.jpg"
-            exposure="3"
+          
+            exposure="1.4"
             camera-controls
             interaction-prompt="none"
-            auto-rotate
-        auto-rotate-delay="100"
+         auto-rotate
+         auto-rotate-speed="3000"
+        // auto-rotate-delay="4000"
             //interaction-prompt-threshold="100"
             touch-action="none"
-            camera-orbit="45deg 85deg 0m"
-            camera-target="0m 3m 0m"
+            camera-orbit="65deg 85deg 0m"
+            camera-target="0m 2m 1.5m"
             field-of-view="45deg"
             interpolation-decay="130"
             shadow-intensity="0.5"
             ref={modelRef}
         >
-            {showBtn && promptVisible && <div className="interactionWindow" onClick={() => setpromptVisible(false)}>PRESS BUTTOM BELOW TO LOOK CLOSER<br />&#8595;&#8595;&#8595;</div>}
+            {showBtn && promptVisible && <div className="interactionWindow" onClick={() => setpromptVisible(false)}>WELCOME TO MY WORLD<br />&#9829;&#9829;&#9829;</div>}
             <ModelDescription id={presentId} />
 
 
             {showBtn &&
                 <button className="returnButton"
                     onClick={() => {
-                        setModel("45deg 75deg 0m", "0m 3m 0m");
+                        setModel("65deg 85deg 0m", "0m 2m 1.5m");
                         setpresentId(0);
                     }}
                 >Back To Center
@@ -60,7 +67,7 @@ function ModelContent() {
 
             <button className="viewButton"
                 slot="hotspot-2"
-                data-surface="3 0 33 35 34 0.381 0.460 0.159"
+                data-surface="3 0 33 35 34 0.381 0.460 0.222"
                 onClick={() => {
                     setModel("90deg 90deg 14m", "-15.5m 4.7m 2.7m");
                     setpromptVisible(false);
@@ -110,6 +117,7 @@ function ModelContent() {
 
 
         </model-viewer>
+          </div>
     );
 }
 
