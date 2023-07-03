@@ -19,9 +19,9 @@ function Header() {
                     <Container fluid style={{ justifyContent: 'end' }}>
                         <Navbar.Brand href="#home">
                             <img
-                                src="../../public/images/logo2.png"
+                                src="../../public/images/logo.png"
                                 width="130"
-                                height="80"
+                                height="130"
 
                                 className={styles.logo}
                                 alt="React Bootstrap logo"
@@ -64,7 +64,7 @@ function Header() {
                                         
                                         fontSize: "17px",
                                         cursor: "pointer",
-                                    }}>3D MODEL</Nav.Link>
+                                    }}>3D ART</Nav.Link>
                                     <Nav.Link as={NavLink} to="/Photo" style={{
                                         color: "#FF69B4",
                                         

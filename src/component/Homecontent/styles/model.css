@@ -10,6 +10,94 @@ html{
     cursor:url('https://cur.cursors-4u.net/games/gam-2/gam198.png'),pointer ;
 }
 
+/*animation*/
+
+  
+  @keyframes typing {
+    from {
+      width: 0;
+      
+    }
+    to {
+      width: 100%;
+     
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #fda5e0;
+      
+    }
+  }
+  
+
+.home-title h3{
+    font-family: "123";
+    font-size: 48px;
+ 
+  color: #ffbee3;
+  letter-spacing: 4px;
+    text-align: left;
+    margin: 0%;
+    position: absolute;
+    z-index: 999;
+    justify-content: baseline;
+    white-space: nowrap;
+    font-weight: 600;
+    text-shadow: 0 1px 0 #ccc, 
+
+    0 2px 0 #aefffc,
+
+    0 3px 0 #ff6cce,
+
+    0 4px 0 #df38fc,
+
+    0 5px 0 #bc74ff,
+
+    0 6px 1px rgba(0, 0, 0, 0.162),
+
+    0 0 5px rgba(0,0,0,.1),
+
+    0 1px 3px rgba(0,0,0,.3),
+
+    0 3px 5px rgba(0,0,0,.2),
+
+    0 5px 10px rgba(0,0,0,.25),
+
+    0 10px 10px rgba(0,0,0,.2),
+
+    0 20px 20px rgba(0,0,0,.15);
+    animation: typing 3s steps(12), blink-caret 0.75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.25em solid rgb(252, 250, 250);
+}
+
+.home-title {
+    font-family: "123";
+
+  padding: 8%;
+  color: #e3089e;
+  letter-spacing: 4px;
+    text-align: left;
+    margin: 0%;
+    position: absolute;
+    z-index: 999;
+    justify-content: baseline;
+}
+
+.home-title h5{
+    
+    padding-top: 35%;
+    font-size: 16px;
+}
+
+
+
 .interactionWindow{
     background: #fff;
     opacity: 80%;

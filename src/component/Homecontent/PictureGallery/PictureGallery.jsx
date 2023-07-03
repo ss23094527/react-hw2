@@ -3,11 +3,11 @@ import './Picture.css';
 
 const PictureGallery = () => {
   const [images, setImages] = useState([
-    { id: 1, src: 'https://img.onl/fyqA6S', left:240, top: 200 },
-    { id: 2, src: 'https://img.onl/CmNLNs', left: 140, top: 700 },
-    { id: 3, src: 'https://img.onl/cg4fVG', left: 1400, top: 440 },
-    { id: 4, src: 'https://img.onl/LcBCYJ', left: 1590, top:200 },
-    { id: 5, src: 'https://img.onl/jpQe7B', left: 1600, top: 550 },
+    { id: 1, src: 'https://img.onl/fyqA6S', left:240, top: 250 },
+    { id: 2, src: 'https://img.onl/CmNLNs', left: 140, top: 550 },
+    { id: 3, src: 'https://img.onl/cg4fVG', left: 1190, top: 440 },
+    { id: 4, src: 'https://img.onl/LcBCYJ', left: 1290, top:200 },
+    { id: 5, src: 'https://img.onl/jpQe7B', left: 1300, top: 550 },
     { id: 6, src: 'https://img.onl/r47GzP', left: 100, top: 440 },
   ]);
 

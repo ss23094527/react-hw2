@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home'
-import Graphic from './pages/Graphic'
+import Graphic from './pages/Graphic/Graphic'
 import Photo from './pages/Photo'
 import About from './pages/About'
 import Model from './pages/Model'
