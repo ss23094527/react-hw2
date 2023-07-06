@@ -1,16 +1,15 @@
 .loading-container {
-  background-color: #ffffff;
- 
+  background: linear-gradient(to bottom, #ffffff, #ffabd2);
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  z-index: 999;
 }
-/* 泡泡loaading */
-.loading{
-  
+
+.loading {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -19,7 +18,7 @@
   
 }
 
-.bubble{
+.bubble {
   margin-top: 20%;
   margin-left: 45%;
   flex-direction: column;
@@ -27,70 +26,99 @@
   justify-content: center;
   width: 200px;
   height: 200px;
-  /* 径向渐变 */
-  background: radial-gradient(circle at 75% 30%,#fff 5px,#ff21c0 8%,#5b5b5b 60%,#ff21c0 100%);
+  background: radial-gradient(circle at 75% 30%, #fff 5px, #ff21c0 8%, #5b5b5b 60%, #ff21c0 100%);
   border-radius: 50%;
-  /* 阴影 */
   box-shadow: inset 0 0 20px #fff,
-      inset 10px 0 46px #eaf5fc,
-      inset 80px 0 60px #efcde6,
-      inset -20px -60px 100px #f9f6de,
-      inset 0 50px 140px #f9f6de,
-      0 0 90px #fff;
-  /* 执行动画：动画名 时长 加速后减速 无限次播放 */
+    inset 10px 0 46px #eaf5fc,
+    inset 80px 0 60px #efcde6,
+    inset -20px -60px 100px #f9f6de,
+    inset 0 50px 140px #f9f6de,
+    0 0 90px #fff;
   animation: bubble 4s ease-in-out infinite;
 }
-.shadow{
-  
-  background-color: rgba(0,0,0,0.15);
+
+.shadow {
+  background-color: rgba(0, 0, 0, 0.15);
   width: 150px;
   height: 40px;
   border-radius: 50%;
-  /* 绝对定位 */
   position: absolute;
   left: 50%;
   margin-left: -55px;
   bottom: 190px;
-  /* 一点点模糊效果 */
   filter: blur(1.5px);
-  /* 执行动画：动画名 时长 加速后减速 无限次播放 */
   animation: shadow 4s ease-in-out infinite;
 }
 
-/* 定义动画 */
-/* 泡泡浮动动画 */
 @keyframes bubble {
-  0%,100%{
-      transform: translateY(0);
+  0%, 100% {
+    transform: translateY(0);
   }
-  50%{
-      transform: translateY(-80px);
-  }
-}
-/* 投影动画 */
-@keyframes shadow {
-  0%,100%{
-      transform: scale(0.5);
-  }
-  50%{
-      transform: scale(1);
+  50% {
+    transform: translateY(-80px);
   }
 }
 
+@keyframes shadow {
+  0%, 100% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
 
 @media (max-width: 768px) {
-  .bubble{
+  .bubble {
     margin-top: 70%;
     margin-left: 35%;
     width: 100px;
     height: 100px;
   }
 
-  .shadow{
+  .shadow {
     width: 80px;
     height: 30px;
     left: 57%;
-  margin-left: -70px;
-  bottom: 250px;
+    margin-left: -70px;
+    bottom: 250px;
+  }
+}
+
+.loading-text {
+  font-family: '123';
+  color: #ffffff;
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  left: 1.5%;
+  letter-spacing: 3px;
+}
+
+.loading-dots {
+  display: block;
+  align-items: center;
+}
+
+.loading-dots span {
+  
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
+ 
+  margin: 0 4px;
+  animation: jump 0.5s infinite alternate;
+}
+
+@keyframes jump {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-8px);
   }
 }

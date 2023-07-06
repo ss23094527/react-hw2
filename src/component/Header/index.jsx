@@ -19,7 +19,7 @@ function Header() {
                     <Container fluid style={{ justifyContent: 'end' }}>
                         <Navbar.Brand href="#home">
                             <img
-                                src="./logo.png"
+                                src="../../../public/images/logo.png"
                                 width="130"
                                 height="130"
 
@@ -49,31 +49,31 @@ function Header() {
                                     }}>HOME</Nav.Link>
                                     <Nav.Link as={NavLink} to="/About" style={{
                                         color: "#FF69B4",
-                                        
+
                                         fontSize: "17px",
                                         cursor: "pointer",
                                     }}>ABOUT ME</Nav.Link>
                                     <Nav.Link as={NavLink} to="/Graphic" style={{
                                         color: "#FF69B4",
-                                       
+
                                         fontSize: "17px",
                                         cursor: "pointer",
                                     }}>GRAPHIC</Nav.Link>
                                     <Nav.Link as={NavLink} to="/Model" style={{
                                         color: "#FF69B4",
-                                        
+
                                         fontSize: "17px",
                                         cursor: "pointer",
                                     }}>3D ART</Nav.Link>
                                     <Nav.Link as={NavLink} to="/Photo" style={{
                                         color: "#FF69B4",
-                                        
+
                                         fontSize: "17px",
                                         cursor: "pointer",
                                     }}>WEB DESIGN</Nav.Link>
-  <Nav.Link as={NavLink} to="/Photo" style={{
+                                    <Nav.Link as={NavLink} to="/Photo" style={{
                                         color: "#FF69B4",
-                                        
+
                                         fontSize: "17px",
                                         cursor: "pointer",
                                     }}>PHOTOGRAPH</Nav.Link>
