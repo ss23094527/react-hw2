@@ -19,12 +19,12 @@ function Header() {
                     <Container fluid style={{ justifyContent: 'end' }}>
                         <Navbar.Brand href="#home">
                             <img
-                                src="../../public/images/logo.png"
+                                src="./logo.png"
                                 width="130"
                                 height="130"
 
                                 className={styles.logo}
-                                alt="React Bootstrap logo"
+                                alt="logo"
                             />
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
