@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/graphic.css";
-import Masonry from 'react-masonry-css';
+import Masonry from "react-masonry-css";
+import Loading from "../loading/index";
+
 
 function GraphicContent() {
   const images = [
@@ -28,7 +30,6 @@ function GraphicContent() {
     { url: "https://img.onl/MefUBF", description: "圖片 3 的描述" },
     { url: "https://img.onl/Q9phtA", description: "圖片 3 的描述" },
     { url: "https://img.onl/L9cRO1", description: "圖片 3 的描述" },
-  
   ];
 
   const getRandomIndex = (max) => Math.floor(Math.random() * max);
@@ -46,10 +47,25 @@ function GraphicContent() {
   const breakpointColumnsObj = {
     default: 4,
     1200: 3,
-    768: 1
+    768: 1,
   };
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const imagePromises = images.map((image) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = image.url;
+        img.onload = () => resolve();
+      });
+    });
+
+    Promise.all(imagePromises).then(() => {
+      setIsLoading(false);
+    });
+  }, []);
 
   const openImage = (imageUrl) => {
     setSelectedImage(imageUrl);
@@ -61,34 +77,45 @@ function GraphicContent() {
 
   return (
     <div className="GraphicContent">
-      <div className="g-title">
-        <h3>/%% GRAPHIC DESIGN/</h3>
-        <h5>Visual Designer<br /> Portfolio</h5>
-      </div>
-
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="image-container"
-        columnClassName="image-wrapper"
-      >
-        {images.map((image, index) => (
-          <div key={index} className="image-item">
-            <img
-              src={image.url}
-              alt="Graphic"
-              onClick={() => openImage(image.url)}
-            />
-            <div className="image-description">{image.description}</div>
-          </div>
-        ))}
-      </Masonry>
-
-      {selectedImage && (
-        <div className="overlay" onClick={closeImage}>
-          <div className="image-modal">
-            <img src={selectedImage} alt="Graphic" />
-          </div>
+      {isLoading ? (
+        <div className="loading">
+          <Loading />
         </div>
+      ) : (
+        <>
+          <div className="g-title">
+            <h3>/%% GRAPHIC DESIGN/</h3>
+            <h5>
+              Visual Designer
+              <br /> Portfolio
+            </h5>
+          </div>
+
+          <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="image-container"
+            columnClassName="image-wrapper"
+          >
+            {images.map((image, index) => (
+              <div key={index} className="image-item">
+                <img
+                  src={image.url}
+                  alt="Graphic"
+                  onClick={() => openImage(image.url)}
+                />
+                <div className="image-description">{image.description}</div>
+              </div>
+            ))}
+          </Masonry>
+
+          {selectedImage && (
+            <div className="overlay" onClick={closeImage}>
+              <div className="image-modal">
+                <img src={selectedImage} alt="Graphic" />
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

@@ -198,3 +198,71 @@ html{
  
     }
 }
+
+/* 平板设备 CSS */
+@media only screen and (max-width: 1024px) {
+  .home-title h3 {
+    font-size: 64px;
+    position: relative;
+    margin-top: 20%;
+  }
+
+  .home-title h5 {
+    padding-top: 5%;
+    font-size: 16px;
+  }
+
+  .interactionWindow {
+    top: 40px;
+  }
+
+  .presentWindow {
+    top: 80px;
+    right: 10px;
+  }
+
+  .viewButton {
+    font-size: 8px;
+  }
+
+  .returnButton {
+    top: 60px;
+    right: 10px;
+    font-size: 9px;
+  }
+}
+
+/* 手机设备 CSS */
+@media only screen and (max-width: 376px) {
+  .home-title h3 {
+    z-index: -1;
+    margin-top: 25%;
+    position: relative;
+    font-size: 30px;
+  }
+
+  .home-title h5 {
+    padding-top: 5%;
+    font-size: 10px;
+  }
+
+  .interactionWindow {
+    top: 20px;
+  }
+
+  .presentWindow {
+    top: 60px;
+    right: 5px;
+  }
+
+  .viewButton {
+    font-size: 6px;
+  }
+
+  .returnButton {
+    top: 90%;
+    right: 5%;
+    font-size: 7px;
+    z-index: 999;
+  }
+}

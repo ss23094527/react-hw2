@@ -3,6 +3,7 @@ import "./styles/model.css";
 import Masonry from 'react-masonry-css';
 import Loading from '../loading/index';
 
+
 function ModelContent() {
 
 
@@ -16,13 +17,17 @@ function ModelContent() {
     { url: "https://img.onl/knS43", description: "圖片 3 的描述" },
     { url: "https://img.onl/aigFze", description: "圖片 3 的描述" },
     { url: "https://img.onl/FngeTO", description: "圖片 3 的描述" },
-    { url: "https://s31.aconvert.com/convert/p3r68-cdx67/r5n0v-3g2z0.gif", description: "圖片 3 的描述" },
-    { url: "https://s27.aconvert.com/convert/p3r68-cdx67/wb7tf-ly8kv.gif", description: "圖片 3 的描述" },
-    { url: "https://s19.aconvert.com/convert/p3r68-cdx67/58i7n-s0iys.gif", description: "圖片 3 的描述" },
-    { url: "https://s27.aconvert.com/convert/p3r68-cdx67/ve1at-wir41.gif", description: "圖片 3 的描述" },
-    { url: "https://s19.aconvert.com/convert/p3r68-cdx67/ms4ms-4sg4a.gif", description: "圖片 3 的描述" },
-    { url: "https://s19.aconvert.com/convert/p3r68-cdx67/k59hd-51nv3.gif", description: "圖片 3 的描述" },
-    { url: "https://s19.aconvert.com/convert/p3r68-cdx67/7b9fa-46t0d.gif", description: "圖片 3 的描述" },
+    { url: "https://im3.ezgif.com/tmp/ezgif-3-8b01d4e7ff.gif", description: "圖片 3 的描述" },
+    { url: "https://im3.ezgif.com/tmp/ezgif-3-738ffd169b.gif", description: "圖片 3 的描述" },
+    { url: "https://im3.ezgif.com/tmp/ezgif-3-dcb0d619fe.gif", description: "圖片 3 的描述" },
+    { url: "https://im3.ezgif.com/tmp/ezgif-3-99dd070d36.gif", description: "圖片 3 的描述" },
+    { url: "https://im3.ezgif.com/tmp/ezgif-3-d134b45778.gif", description: "圖片 3 的描述" },
+    { url: "https://im3.ezgif.com/tmp/ezgif-3-90c5d0d2c1.gif", description: "圖片 3 的描述" },
+    { url: "https://im3.ezgif.com/tmp/ezgif-3-32de7733c2.gif", description: "圖片 3 的描述" },
+    { url: "https://im3.ezgif.com/tmp/ezgif-3-19c0452800.gif", description: "圖片 3 的描述" },
+    { url: "https://im3.ezgif.com/tmp/ezgif-3-9a9a5c3574.gif", description: "圖片 3 的描述" },
+    { url: "https://im3.ezgif.com/tmp/ezgif-3-9c2e1ec601.gif", description: "圖片 3 的描述" },
+    { url: "https://im3.ezgif.com/tmp/ezgif-3-87db9f5825.gif", description: "圖片 3 的描述" },
   ];
 
   const getRandomIndex = (max) => Math.floor(Math.random() * max);
@@ -40,16 +45,26 @@ function ModelContent() {
   const breakpointColumnsObj = {
     default: 4,
     1200: 3,
-    768: 1
+    768: 1,
   };
 
   const [selectedImage, setSelectedImage] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [randomImages, setRandomImages] = useState([]);
 
   useEffect(() => {
-    setRandomImages(getRandomImages(images.length));
-    setLoading(false);
+    const imagePromises = images.map((image) => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = image.url;
+        img.onload = () => resolve();
+      });
+    });
+
+    Promise.all(imagePromises).then(() => {
+      setRandomImages(getRandomImages(images.length));
+      setIsLoading(false);
+    });
   }, []);
 
   const openImage = (imageUrl) => {
@@ -62,36 +77,45 @@ function ModelContent() {
 
   return (
     <div className="modelContent">
-      <div className="m-title">
-        <h3>/%% 3D ART/</h3>
-        <h5>Visual Designer<br /> Portfolio</h5>
-      </div>
-
-     
-        <Masonry
-          breakpointCols={breakpointColumnsObj}
-          className="image-container"
-          columnClassName="image-wrapper"
-        >
-          {randomImages.map((image, index) => (
-            <div key={index} className="image-item">
-              <img
-                src={image.url}
-                alt="Graphic"
-                onClick={() => openImage(image.url)}
-              />
-              <div className="image-description">{image.description}</div>
-            </div>
-          ))}
-        </Masonry>
-      
-
-      {selectedImage && (
-        <div className="overlay" onClick={closeImage}>
-          <div className="image-modal">
-            <img src={selectedImage} alt="Graphic" />
-          </div>
+      {isLoading ? (
+        <div className="loading">
+          <Loading />
         </div>
+      ) : (
+        <>
+          <div className="m-title">
+            <h3>/%% 3D ART/</h3>
+            <h5>
+              Visual Designer
+              <br /> Portfolio
+            </h5>
+          </div>
+
+          <Masonry
+            breakpointCols={breakpointColumnsObj}
+            className="image-container"
+            columnClassName="image-wrapper"
+          >
+            {randomImages.map((image, index) => (
+              <div key={index} className="image-item">
+                <img
+                  src={image.url}
+                  alt="Graphic"
+                  onClick={() => openImage(image.url)}
+                />
+                <div className="image-description">{image.description}</div>
+              </div>
+            ))}
+          </Masonry>
+
+          {selectedImage && (
+            <div className="overlay" onClick={closeImage}>
+              <div className="image-modal">
+                <img src={selectedImage} alt="Graphic" />
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

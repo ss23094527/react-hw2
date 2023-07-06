@@ -4,8 +4,10 @@ import "./Loading.css";
 function Loading() {
   return (
     <div className="loading-container">
-      <div className="loading-circle"></div>
-      <div className="loading-text">Loading</div>
+    <div className="loading">
+        <div className="bubble"></div>
+        <div className="shadow"></div>
+    </div>
     </div>
   );
 }

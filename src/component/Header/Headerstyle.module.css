@@ -9,6 +9,12 @@
     margin-left: 10%;
 }
 
+@media only screen and (max-width:768px) {
+    .logo{
+        display: none;
+    }
+}
+
  .photo{
     margin: 10px;
     position: relative;

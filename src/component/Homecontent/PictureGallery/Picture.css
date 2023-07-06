@@ -22,3 +22,16 @@
     transform: scale(1.2);
   }
   
+  @media (max-width: 768px) {
+    .DraggableImages-img {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 376px) {
+    .DraggableImages-img {
+      display: none;
+    }
+  }
+  
+

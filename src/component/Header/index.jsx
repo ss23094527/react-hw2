@@ -70,8 +70,13 @@ function Header() {
                                         
                                         fontSize: "17px",
                                         cursor: "pointer",
+                                    }}>WEB DESIGN</Nav.Link>
+  <Nav.Link as={NavLink} to="/Photo" style={{
+                                        color: "#FF69B4",
+                                        
+                                        fontSize: "17px",
+                                        cursor: "pointer",
                                     }}>PHOTOGRAPH</Nav.Link>
-
 
                                 </Nav>
 
