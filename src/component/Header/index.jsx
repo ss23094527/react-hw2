@@ -65,7 +65,7 @@ function Header() {
                                         fontSize: "17px",
                                         cursor: "pointer",
                                     }}>3D ART</Nav.Link>
-                                    <Nav.Link as={NavLink} to="/Photo" style={{
+                                    <Nav.Link as={NavLink} to="/Web" style={{
                                         color: "#FF69B4",
 
                                         fontSize: "17px",

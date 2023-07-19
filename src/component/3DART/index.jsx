@@ -9,25 +9,26 @@ function ModelContent() {
 
 
   const images = [
-    { url: "https://img.onl/X8rIUO", description: "青年就業計畫-初次尋職尋覓新天地" },
-  
+    { url: "https://img.onl/msxSOQ", description: "青年就業計畫-初次尋職尋覓新天地" },
+    { url: "https://img.onl/fKFWqV", description: "當個防疫小尖兵" },
     { url: "https://img.onl/2NQzCG", description: "當個防疫小尖兵" },
-    { url: "https://img.onl/xgEvn", description: "圖片 3 的描述" },
-    { url: "https://img.onl/srd2nz", description: "圖片 3 的描述" },
-    { url: "https://img.onl/knS43", description: "圖片 3 的描述" },
-    { url: "https://img.onl/aigFze", description: "圖片 3 的描述" },
-    { url: "https://img.onl/FngeTO", description: "圖片 3 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-8b01d4e7ff.gif", description: "圖片 3 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-738ffd169b.gif", description: "圖片 3 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-dcb0d619fe.gif", description: "圖片 3 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-99dd070d36.gif", description: "圖片 3 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-d134b45778.gif", description: "圖片 3 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-90c5d0d2c1.gif", description: "圖片 3 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-32de7733c2.gif", description: "圖片 3 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-19c0452800.gif", description: "圖片 3 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-9a9a5c3574.gif", description: "圖片 3 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-9c2e1ec601.gif", description: "圖片 3 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-87db9f5825.gif", description: "圖片 3 的描述" },
+    { url: "https://img.onl/eBqNl", description: "當個防疫小尖兵" },
+    { url: "https://img.onl/xgEvn", description: "圖片 6 的描述" },
+    { url: "https://img.onl/srd2nz", description: "圖片4 的描述" },
+    { url: "https://img.onl/TWzUPs", description: "圖片 1 的描述" },
+    { url: "https://img.onl/aigFze", description: "圖片7 的描述" },
+    { url: "https://img.onl/FngeTO", description: "圖片 9 的描述" },
+    { url: "https://media.giphy.com/media/HEXxgTxCs0adsTi1Dd/giphy.gif", description: "圖片 3 的描述" },
+    { url: "https://media.giphy.com/media/4kINYaeMXT2MFyh06G/giphy.gif", description: "圖片 3 的描述" },
+    { url: "https://media.giphy.com/media/0ZeBzUyp37tI3yrJ7o/giphy.gif", description: "圖片 3 的描述" },
+    { url: "https://media.giphy.com/media/sUJLk8CBRyKqfzcfji/giphy.gif", description: "圖片 3 的描述" },
+    { url: "https://media.giphy.com/media/WRjgIXQQs01ztqv8bh/giphy.gif", description: "圖片 3 的描述" },
+    { url: "https://media.giphy.com/media/nMpar6LjdwEhWIf2zS/giphy.gif", description: "圖片 3 的描述" },
+    { url: "https://media.giphy.com/media/VroFpHMO29camcpeDf/giphy.gif", description: "圖片 3 的描述" },
+    { url: "https://media.giphy.com/media/7Ta421lJwlgLtTZ1wZ/giphy.gif", description: "圖片 3 的描述" },
+    { url: "https://media.giphy.com/media/fTF1uWw2OfsoAYVKzw/giphy.gif", description: "圖片 3 的描述" },
+    { url: "https://media.giphy.com/media/E3gNOaYVeuUSb4ETii/giphy.gif", description: "圖片 3 的描述" },
+    
   ];
 
   const getRandomIndex = (max) => Math.floor(Math.random() * max);

@@ -6,6 +6,7 @@ import Graphic from './pages/Graphic/Graphic'
 import Photo from './pages/Photo'
 import About from './pages/About'
 import Model from './pages/Model'
+import Web from './pages/Web';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/Graphic" element={<Graphic />} />
           <Route path="/Photo" element={<Photo />} />
           <Route path="/Model" element={<Model />} />
+          <Route path="/Web" element={<Web />} />
         </Routes>
       </BrowserRouter>
     </HelmetProvider>

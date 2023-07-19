@@ -1,17 +1,16 @@
 import Header from "../component/Header/index";
 
 import Footer from "../component/Footer";
-import PhotoContent from "../component/PhotoContent/index";
 
+import WebContent from "../component/WebContent/index";
 
-
-function Photo(){
+function Web(){
     return(
         <div className="main-layout main-container">
             <Header />
-           <PhotoContent />
+           <WebContent />
             <Footer className="footer-layout"/>
         </div>
     );
 }
-export default Photo;
+export default Web;

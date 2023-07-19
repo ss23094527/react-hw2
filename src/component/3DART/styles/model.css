@@ -1,8 +1,8 @@
 .modelContent {
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #110e11, #211e1e, #332929, #332929, #332929, #201a1a, #513945, #12013ff7, #360a3f,#2b131df1);
-  }
+     background: linear-gradient(180deg, #ffffff, #ffffff, #ff98cd);
+    }
   
   .m-title h3 {
     font-family: "123";
@@ -16,7 +16,7 @@
     justify-content: baseline;
     white-space: nowrap;
     font-weight: 600;
-    text-shadow: 0 1px 0 #ccc, 0 2px 0 #aefffc, 0 3px 0 #ff6cce, 0 4px 0 #df38fc, 0 5px 0 #bc74ff, 0 6px 1px rgba(0, 0, 0, 0.162), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #aefffc, 0 3px 0 #ff6cce, 0 4px 0 #df38fc, 0 5px 0 #bc74ff, 0 6px 1px rgba(0, 0, 0, 0.162), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, 0), 0 20px 20px rgba(0, 0, 0, 0);
     animation: typing 3s steps(25), blink-caret 0.75s step-end infinite;
     white-space: nowrap;
     overflow: hidden;
@@ -129,4 +129,14 @@
     max-height: 100%;
     margin: auto;
   }
-  
+  @media only screen and (max-width: 520px) {
+    .m-title h3{
+      justify-content: center;
+      margin-top: 10%;
+      align-items: center;
+      font-size: 25px;
+    }
+    .m-title h5{
+      font-size: 12px;
+    }
+  }

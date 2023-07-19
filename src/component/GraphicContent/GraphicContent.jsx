@@ -21,11 +21,11 @@ function GraphicContent() {
     { url: "https://img.onl/TAX2eK", description: "圖片 3 的描述" },
     { url: "https://img.onl/TGBZ56", description: "圖片 3 的描述" },
     { url: "https://img.onl/ooj9Se", description: "圖片 3 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-c664831180.gif", description: "未完待續-作品集封面" },
+    { url: "https://media.giphy.com/media/JjeV0jdiwpW0vnleeh/giphy.gif", description: "未完待續-作品集封面" },
     { url: "https://img.onl/DmmIZh", description: "圖片 w 的描述" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-3e54df330f.gif", description: "前兔似錦-中國生肖兔比賽" },
-    { url: "https://im3.ezgif.com/tmp/ezgif-3-448d8aebad.gif", description: "花一開就相愛吧" },
-    
+    { url: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExanU1eGNlbml6NHZsc2JxNWU2ZnJocGg2c2w0a2Mza3p2NHpnMXRzOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/82XNl291IeNDBbZlOe/giphy.gif", description: "前兔似錦-中國生肖兔比賽" },
+    { url: "https://media.giphy.com/media/tuNPj4uzKN3hPGsRuF/giphy.gif", description: "花一開就相愛吧" },
+    { url: "https://img.onl/nVVVqX", description: "圖片 3 的描述" },
     { url: "https://img.onl/AmmImS", description: "圖片 2 的描述" },
     { url: "https://img.onl/MefUBF", description: "圖片x 的描述" },
     { url: "https://img.onl/Q9phtA", description: "圖片 3 的描述" },
@@ -63,7 +63,7 @@ useEffect(() => {
   const breakpointColumnsObj = {
     default: 4,
     1200: 3,
-    768: 1,
+    768: 2,
   };
 
   const openImage = (imageUrl) => {
